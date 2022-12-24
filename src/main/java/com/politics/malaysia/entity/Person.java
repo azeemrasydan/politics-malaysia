@@ -1,13 +1,16 @@
 package com.politics.malaysia.entity;
 
 import javax.persistence.*;
+
+import jakarta.persistence.Entity;
+
 import java.util.*;
 
 @Entity
 @Table(name = "persons")
 public class Person {
 
-    @Id
+    @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -23,9 +26,9 @@ public class Person {
     @Column(name = "date_of_birth", nullable = false, unique = false)
     private Date dateOfBirth;
 
-    @ManyToMany
-    @JoinTable(name = "skills_possessions", joinColumns = @JoinColumn(name = "person_id"), inverseJoinColumns = @JoinColumn(name = "course_id"))
-    Set<Skill> possessSkills;
+    // @ManyToMany
+    // @JoinTable(name = "skills_possessions", joinColumns = @JoinColumn(name = "person_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id"))
+    // Set<Skill> skills;
 
     public String getFirstName() {
         return this.firstName;
