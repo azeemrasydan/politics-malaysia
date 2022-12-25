@@ -36,6 +36,12 @@ public class Person {
         return this.familyName;
     }
 
+    public String getMiddleName(){ return this.middleName; }
+
+    public Date getDateOfBirth(){ return this.dateOfBirth; }
+
+    public Set<Skill> getSkills(){ return this.skills; }
+
     public void setFirstName(String name) {
         this.firstName = name;
     }
@@ -51,4 +57,6 @@ public class Person {
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
+
+    public void setSkills(Set<Skill> skills){ this.skills = skills; }
 }

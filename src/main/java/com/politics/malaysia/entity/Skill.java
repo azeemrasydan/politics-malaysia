@@ -17,6 +17,9 @@ public class Skill {
     @ManyToMany(mappedBy = "skills")
     private Set<Person> people;
 
+    public String getKnownAs(){
+        return this.knownAs;
+    }
     public void setKnownAs(String knownAs){
         this.knownAs = knownAs;
     }
