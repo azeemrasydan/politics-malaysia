@@ -1,27 +1,32 @@
 package com.politics.malaysia.entity;
 
-import javax.persistence.*;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "skills_possessions")
 public class SkillsPossession {
-  @jakarta.persistence.Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
-  @jakarta.persistence.ManyToOne
+  @ManyToOne
   @JoinColumn(name = "person_id")
   private Person person;
 
-  @jakarta.persistence.ManyToOne
+  @ManyToOne
   @JoinColumn(name = "skill_id")
   private Skill skill;
 
   // Getters and setters for id, person, and skill
+
+  public Skill getSkill() {
+    return this.skill;
+  }
+
+  public Person getPerson() {
+    return this.person;
+  }
+
   public void setPerson(Person person) {
     this.person = person;
   }

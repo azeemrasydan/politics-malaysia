@@ -1,11 +1,6 @@
 package com.politics.malaysia.entity;
 
-import javax.persistence.*;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 import java.util.*;
 
@@ -13,7 +8,7 @@ import java.util.*;
 @Table(name = "persons")
 public class Person {
 
-    @jakarta.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -47,6 +42,10 @@ public class Person {
 
     public void setFamilyName(String name) {
         this.familyName = name;
+    }
+
+    public void setMiddleName(String name){
+        this.middleName = name;
     }
 
     public void setDateOfBirth(Date dateOfBirth) {

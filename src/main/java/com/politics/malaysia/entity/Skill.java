@@ -1,18 +1,13 @@
 package com.politics.malaysia.entity;
 
-import javax.persistence.*;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 
 import java.util.*;
 
 @Entity
 @Table(name = "skills")
 public class Skill {
-    @jakarta.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 

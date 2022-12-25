@@ -1,5 +1,7 @@
 package com.politics.malaysia.seeders;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,25 +20,27 @@ public class DataSeeder {
     @Transactional
     public void seedData() {
         // Seed data for the Person table
+
         Person person1 = new Person();
         person1.setFirstName("John");
-        entityManager.persist(person1);
+        person1.setFamilyName("Doe");
+        person1.setMiddleName("Smith");
+        person1.setDateOfBirth(new Date());
 
         Person person2 = new Person();
         person2.setFirstName("Jane");
-        entityManager.persist(person2);
+        person2.setFamilyName("Doe");
+        person2.setDateOfBirth(new Date());
 
         Person person3 = new Person();
         person3.setFirstName("Bob");
+        person3.setFamilyName("Smith");
+        person3.setDateOfBirth(new Date());
+
+        // Save the Person objects to the database
+        entityManager.persist(person1);
+        entityManager.persist(person2);
         entityManager.persist(person3);
-
-        Person person4 = new Person();
-        person4.setFirstName("Alice");
-        entityManager.persist(person4);
-
-        Person person5 = new Person();
-        person5.setFirstName("Tom");
-        entityManager.persist(person5);
 
         // Seed data for the Skill table
         Skill skill1 = new Skill();
@@ -89,11 +93,6 @@ public class DataSeeder {
         sp6.setPerson(person3);
         sp6.setSkill(skill5);
         entityManager.persist(sp6);
-
-        SkillsPossession sp7 = new SkillsPossession();
-        sp7.setPerson(person4);
-        sp7.setSkill(skill1);
-        entityManager.persist(sp7);
 
     }
 }

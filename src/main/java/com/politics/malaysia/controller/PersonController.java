@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.politics.malaysia.entity.Person;
-import com.politics.malaysia.repositories.PersonRepository;
 import com.politics.malaysia.services.PersonService;
 
 @RestController
