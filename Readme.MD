@@ -1,6 +1,9 @@
-# Political Figure Profiling System
+# 💡 Illuminating the Political Landscape with Profiles
+🌟 "Discover the movers and shakers of the political world"
 
-Welcome to the Political Figure Profiling System! This project is a web application for profiling political figures in Malaysia. It is built using Java Spring Boot for the back-end and Angular for the front-end.
+Welcome to the 🌐 Political Figure Profiling System! This is a web application that allows you to 📝 create, 🔍 view, 📝 update, and ❌ delete profiles for political figures in Malaysia. It is designed to provide detailed information about the 🏆 skills, 🏆 achievements, and 📜 qualifications of these figures, as well as their 🔵 political parties and 📍 locations. With this tool, you can easily 🔍 search for specific figures using various criteria, such as name, party, and location. You can also 🔍 view a list of all political figures and filter the list by party. In addition, you can track the progress of each figure towards their political goals by 📊 calculating their rating score based on their qualifications.
+
+The Political Figure Profiling System is built using 💻 Java Spring Boot for the back-end and 💻 Angular for the front-end. This allows for a user-friendly interface and efficient data management. To get started with the project, you will need to have 💻 Java 8 or higher, 📦 Maven, 💻 Node.js and npm, and 💻 Angular CLI installed on your machine. With these tools, you can build and run the application locally, or deploy it to a web server for wider access.
 
 ## Features
 
