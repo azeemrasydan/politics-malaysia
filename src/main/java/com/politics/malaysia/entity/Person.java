@@ -3,6 +3,9 @@ package com.politics.malaysia.entity;
 import javax.persistence.*;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.ManyToMany;
 
 import java.util.*;
 
@@ -26,9 +29,9 @@ public class Person {
     @Column(name = "date_of_birth", nullable = false, unique = false)
     private Date dateOfBirth;
 
-    // @ManyToMany
-    // @JoinTable(name = "skills_possessions", joinColumns = @JoinColumn(name = "person_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id"))
-    // Set<Skill> skills;
+    @ManyToMany
+    @JoinTable(name = "skills_possessions", joinColumns = @JoinColumn(name = "person_id"), inverseJoinColumns = @JoinColumn(name = "skill_id"))
+    Set<Skill> skills;
 
     public String getFirstName() {
         return this.firstName;
