@@ -20,12 +20,6 @@ import com.politics.malaysia.services.PersonService;
 public class PersonController {
 
     private Logger _logger = LogManager.getLogger(PersonController.class);
-    // private PersonRepository _personRepository;
-
-    // @Autowired
-    // public void setPersonRepository(PersonRepository personRepository) {
-    // _personRepository = personRepository;
-    // }
 
     @Autowired
     private PersonService personService;

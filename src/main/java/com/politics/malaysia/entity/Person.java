@@ -28,6 +28,8 @@ public class Person {
     @JoinTable(name = "skills_possessions", joinColumns = @JoinColumn(name = "person_id"), inverseJoinColumns = @JoinColumn(name = "skill_id"))
     Set<Skill> skills;
 
+    public Long getId(){ return this.id; }
+
     public String getFirstName() {
         return this.firstName;
     }
