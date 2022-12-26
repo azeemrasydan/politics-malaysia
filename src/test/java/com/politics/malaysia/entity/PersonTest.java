@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 
-@SpringBootTest
 public class PersonTest {
 
     @Test

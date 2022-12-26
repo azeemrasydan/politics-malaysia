@@ -1,8 +1,5 @@
 package com.politics.malaysia.controller;
 
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,30 +22,11 @@ public class PersonController {
     private PersonService personService;
 
     @RequestMapping(value = "/persons", method = RequestMethod.GET)
-    public ResponseEntity<Iterable<Person>> list() {
-        _logger.info("Hit persons api");
-
-        Person azira = new Person();
-        azira.setFirstName("Azira");
-        azira.setFamilyName("Kamaruz");
-        azira.setDateOfBirth(new Date(1999));
-
-        Person amir = new Person();
-        amir.setFirstName("Amir");
-        amir.setFamilyName("Hafiz");
-
-        List<Person> persons = Arrays.asList(azira, amir);
+    public ResponseEntity<Iterable<Person>> getPersons() {
+        _logger.info("/persons");
+        Iterable<Person> persons = personService.getAll();
         return new ResponseEntity<Iterable<Person>>(persons, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public ResponseEntity<Iterable<Person>> test() {
-    _logger.info("Hit a");
-    
-    Iterable<Person> persons = personService.getAll();
-
-    return new ResponseEntity<Iterable<Person>>(persons,
-    HttpStatus.OK);
-    }
 
 }
